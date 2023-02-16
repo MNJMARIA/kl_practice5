@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class workWithEnum {
     Scanner scanner = new Scanner(System.in);
-    Months month;
-    Seasons season;
+    Month month;
+    Season season;
     int enteredMonth;
-    enum Months {
+    enum Month {
         January,
         February,
         March,
@@ -21,7 +21,7 @@ public class workWithEnum {
         November,
         December;
     }
-    enum Seasons {
+    enum Season {
         Winter,
         Spring,
         Summer,
@@ -34,62 +34,62 @@ public class workWithEnum {
         switch(enteredMonth)
         {
             case 1: {
-                month = Months.January;
+                month = Month.January;
                 System.out.println(month);
                 break;
             }
             case 2: {
-                month = Months.February;
+                month = Month.February;
                 System.out.println(month);
                 break;
             }
             case 3: {
-                month = Months.March;
+                month = Month.March;
                 System.out.println(month);
                 break;
             }
             case 4: {
-                month = Months.April;
+                month = Month.April;
                 System.out.println(month);
                 break;
             }
             case 5: {
-                month = Months.May;
+                month = Month.May;
                 System.out.println(month);
                 break;
             }
             case 6: {
-                month = Months.June;
+                month = Month.June;
                 System.out.println(month);
                 break;
             }
             case 7: {
-                month = Months.July;
+                month = Month.July;
                 System.out.println(month);
                 break;
             }
             case 8: {
-                month = Months.August;
+                month = Month.August;
                 System.out.println(month);
                 break;
             }
             case 9: {
-                month = Months.September;
+                month = Month.September;
                 System.out.println(month);
                 break;
             }
             case 10: {
-                month = Months.October;
+                month = Month.October;
                 System.out.println(month);
                 break;
             }
             case 11: {
-                month = Months.November;
+                month = Month.November;
                 System.out.println(month);
                 break;
             }
             case 12: {
-                month = Months.December;
+                month = Month.December;
                 System.out.println(month);
                 break;
             }
@@ -105,22 +105,22 @@ public class workWithEnum {
         System.out.print("Season: ");
         if(enteredMonth == 1 || enteredMonth ==2 || enteredMonth ==12)
         {
-            season = Seasons.Winter;
+            season = Season.Winter;
             System.out.println(season);
         }
         else if(enteredMonth>2 && enteredMonth <6)
         {
-            season = Seasons.Spring;
+            season = Season.Spring;
             System.out.println(season);
         }
         else if(enteredMonth>=6 && enteredMonth<9)
         {
-            season = Seasons.Summer;
+            season = Season.Summer;
             System.out.println(season);
         }
         else if(enteredMonth>=9 && enteredMonth<12)
         {
-            season = Seasons.Autumn;
+            season = Season.Autumn;
             System.out.println(season);
         }
     }
