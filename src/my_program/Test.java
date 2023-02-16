@@ -5,6 +5,7 @@ public class Test {
         workWithEnum work = new workWithEnum();
         work.findMonthByHisNumber();
         work.findSeasonOfTheMonth();
+        work.showEngOrUa();
 
     }
 }

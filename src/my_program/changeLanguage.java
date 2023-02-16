@@ -4,7 +4,6 @@ public class changeLanguage {
     private int id;
     public String eng;
     public String ua;
-    public String ru;
 
     public int getId() {
         return id;
@@ -17,9 +16,6 @@ public class changeLanguage {
     }
     public void setUa(String ua) {
         this.ua = ua;
-    }
-    public void setRu(String ru) {
-        this.ru = ru;
     }
 
 

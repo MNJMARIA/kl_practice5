@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class workWithEnum {
     Scanner scanner = new Scanner(System.in);
-
     private Enums.Month month;
     private Enums.Season season;
     private int enteredMonth;
+    private String enteredLanguage;
 
     public void findMonthByHisNumber()
     {
@@ -17,67 +17,55 @@ public class workWithEnum {
         {
             case 1: {
                 month = Enums.Month.January;
-                System.out.println(month);
                 break;
             }
             case 2: {
                 month = Enums.Month.February;
-                System.out.println(month);
                 break;
             }
             case 3: {
                 month = Enums.Month.March;
-                System.out.println(month);
                 break;
             }
             case 4: {
                 month = Enums.Month.April;
-                System.out.println(month);
                 break;
             }
             case 5: {
                 month = Enums.Month.May;
-                System.out.println(month);
                 break;
             }
             case 6: {
                 month = Enums.Month.June;
-                System.out.println(month);
                 break;
             }
             case 7: {
                 month = Enums.Month.July;
-                System.out.println(month);
                 break;
             }
             case 8: {
                 month = Enums.Month.August;
-                System.out.println(month);
                 break;
             }
             case 9: {
                 month = Enums.Month.September;
-                System.out.println(month);
                 break;
             }
             case 10: {
                 month = Enums.Month.October;
-                System.out.println(month);
                 break;
             }
             case 11: {
                 month = Enums.Month.November;
-                System.out.println(month);
                 break;
             }
             case 12: {
                 month = Enums.Month.December;
-                System.out.println(month);
                 break;
             }
             default:
             {
-                System.out.println("Wrong operation!");
+                System.out.println("Wrong entered month!");
                 findMonthByHisNumber();
             }
         }
@@ -88,22 +76,39 @@ public class workWithEnum {
         if(enteredMonth == 1 || enteredMonth ==2 || enteredMonth ==12)
         {
             season = Enums.Season.Winter;
-            System.out.println(season);
         }
         else if(enteredMonth>2 && enteredMonth <6)
         {
             season = Enums.Season.Spring;
-            System.out.println(season);
         }
         else if(enteredMonth>=6 && enteredMonth<9)
         {
             season = Enums.Season.Summer;
-            System.out.println(season);
         }
         else if(enteredMonth>=9 && enteredMonth<12)
         {
             season = Enums.Season.Autumn;
-            System.out.println(season);
         }
+    }
+
+    public void showEngOrUa()
+    {
+        System.out.print("Choose language - ua or eng: ");
+        enteredLanguage = scanner.next();
+        if(enteredLanguage.equals("ua"))
+        {
+            System.out.println(month.getUa());
+            System.out.println(season.getUa());
+        }
+        else if(enteredLanguage.equals("eng"))
+        {
+            System.out.println(month.getEng());
+            System.out.println(season.getEng());
+        }
+        else
+        {
+            System.out.println("Wrong entered language!");
+        }
+
     }
 }

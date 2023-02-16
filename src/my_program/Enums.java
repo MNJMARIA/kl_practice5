@@ -1,44 +1,50 @@
 package my_program;
 
 public class Enums {
-    public static
+
     enum Month {
-        January("January", "Січень", "Январь"),
-        February("February", "Лютий","Февраль"),
-        March("March", "Березень","Март"),
-        April("April", "Квітень","Апрель"),
-        May("May", "Травень","Май"),
-        June("June", "Червень","Июнь"),
-        July("July", "Липень","Июль"),
-        August("August", "Серпень","Август"),
-        September("September", "Вересень","Сентябрь"),
-        October("October", "Жовтень","Октябрь"),
-        November("November", "Листопад","Ноябрь"),
-        December("December", "Грудень","Декабрь");
+        January("January", "Січень"),
+        February("February", "Лютий"),
+        March("March", "Березень"),
+        April("April", "Квітень"),
+        May("May", "Травень"),
+        June("June", "Червень"),
+        July("July", "Липень"),
+        August("August", "Серпень"),
+        September("September", "Вересень"),
+        October("October", "Жовтень"),
+        November("November", "Листопад"),
+        December("December", "Грудень");
 
 
         changeLanguage lang = new changeLanguage();
-        Month (String eng, String ua, String ru) {
+        Month (String eng, String ua) {
             this.lang.eng = eng;
-            this.lang.ru = ru;
             this.lang.ua = ua;
         }
-
         public String getEng() {
             return lang.eng;
         }
         public String getUa() {
             return lang.ua;
         }
-        public String getRu() {
-            return lang.ru;
-        }
     }
 
     enum Season {
-        Winter,
-        Spring,
-        Summer,
-        Autumn
+        Winter("Winter","Зима"),
+        Spring("Spring","Весна"),
+        Summer("Summer","Літо"),
+        Autumn("Autumn","Осінь");
+        changeLanguage lang = new changeLanguage();
+        Season(String eng, String ua) {
+            this.lang.eng = eng;
+            this.lang.ua = ua;
+        }
+        public String getEng() {
+            return lang.eng;
+        }
+        public String getUa() {
+            return lang.ua;
+        }
     }
 }
